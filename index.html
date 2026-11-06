@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hermes Agent</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; padding: 3rem 1.5rem; max-width: 46rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #14161a; }
+    a { color: #7fb3ff; }
+    .card { background: #1c1f25; border-color: #2c313a; }
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .35rem; letter-spacing: -.02em; }
+  .sub { color: #666; margin: 0 0 2rem; }
+  @media (prefers-color-scheme: dark) { .sub { color: #9aa2ad; } }
+  h2 { font-size: 1.05rem; margin: 2rem 0 .5rem; text-transform: uppercase; letter-spacing: .06em; color: #555; }
+  @media (prefers-color-scheme: dark) { h2 { color: #98a1ad; } }
+  ul { padding-left: 1.15rem; }
+  li { margin: .3rem 0; }
+  .card { border: 1px solid #e2e2e2; border-radius: 10px; padding: 1rem 1.25rem; background: #fafafa; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e2e2e2; color: #666; font-size: .88rem; }
+  @media (prefers-color-scheme: dark) { footer { border-color: #2c313a; color: #98a1ad; } }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+</style>
+</head>
+<body>
+
+<h1>Hermes Agent</h1>
+<p class="sub">A private, single-user automation agent.</p>
+
+<p>
+  Hermes Agent is a personal automation tool operated by one individual for their own
+  Google Account. It runs locally on the operator's own computer and connects to Google
+  APIs with OAuth 2.0 using credentials the operator created and controls. There is no
+  public sign-up, no other users, and no server-side service offered to third parties.
+</p>
+
+<h2>What it does</h2>
+<div class="card">
+  <ul>
+    <li><strong>Reads the operator's own Gmail</strong> to find messages from the operator's child's school and extract calendar details such as minimum-day and early-dismissal notices.</li>
+    <li><strong>Sends those reminders to the operator</strong> through the operator's own messaging app.</li>
+    <li>May read the operator's own Google Calendar to cross-check scheduling.</li>
+  </ul>
+</div>
+
+<h2>Google data it requests</h2>
+<div class="card">
+  <ul>
+    <li><code>gmail.readonly</code> — read the operator's own mailbox. Messages cannot be modified, sent, or deleted.</li>
+    <li><code>calendar</code> — read the operator's own calendars.</li>
+  </ul>
+  <p style="margin:.6rem 0 0">
+    No other Google data is requested. The agent has no access to any Google Account
+    other than the operator's own.
+  </p>
+</div>
+
+<h2>Data handling</h2>
+<p>
+  Data retrieved from Google stays on the operator's own machine. It is not transmitted
+  to, stored on, or shared with any third party, and it is not used for advertising,
+  profiling, or training machine-learning models. Full detail is in the
+  <a href="privacy.html">Privacy Policy</a>.
+</p>
+
+<footer>
+  Contact: <a href="mailto:sknallt23@gmail.com">sknallt23@gmail.com</a>
+  &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+</body>
+</html>
